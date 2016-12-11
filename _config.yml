@@ -1,0 +1,19 @@
+title: "Olímpiada Venezolana de Informática"
+homeurl: ""
+description: ""
+
+permalink: /:categories/:title/
+encoding: "utf-8"
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+gems:
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: :compressed

@@ -1,0 +1,1 @@
+{%if include.link %}<a href="{{include.link}}" rel="nofollow">{%endif%}<img src="instituciones/{{include.nombre | downcase | sluggify}}/{{include.nombre | downcase | sluggify}}-logo.png" alt="Logo - {{include.nombre}}" height="100px" width="auto" title="{{include.description}}"/>{%if include.link %}</a>{%endif%}

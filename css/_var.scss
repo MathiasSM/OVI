@@ -1,0 +1,189 @@
+$black: #000;
+$dark: #333;
+$mid: #555;
+$gray: #bbb;
+$gl: #dddddd;
+$light: #eee;
+$clear: #f6f6f6;
+
+$ven-yellow: #FCD116;
+$ven-blue: #003893;
+$ven-red: #CE1126;
+
+$my-blue: #247cbf;
+$light-blue: #349fff;
+$color-light: #b2c4cc;
+
+$font-base: "Helvetica" , sans-serif;
+$font-seco:  "Ubuntu", sans-serif;
+
+@mixin animation($str...) {
+  -webkit-animation: $str;
+  animation: $str;
+}
+@mixin filter($parameters){
+  -webkit-filter : $parameters;
+  filter         : $parameters;
+}
+@mixin flexify(){
+  display : -webkit-box;
+  display : -ms-flex;
+  display : -webkit-flex;
+  display : flex;
+}
+@mixin inflexify(){
+  display : -webkit-box;
+  display : -ms-inline-flex;
+  display : -webkit-inline-flex;
+  display : inline-flex;
+}
+@mixin flex($parameters...){
+  -webkit-flex : $parameters;
+  -ms-flex     : $parameters;
+  flex         : $parameters;
+}
+// Dunno what's this for, but it needs prefixes
+@mixin font-feature-settings($args...){
+  -webkit-font-feature-settings: $args;
+  -moz-font-feature-settings: $args;
+  font-feature-settings: $args;
+}
+@mixin column-count($arg){
+  -webkit-column-count: $arg;
+  -moz-column-count: $arg;
+  column-count: $arg;
+}
+@mixin column-gap($arg){
+  -webkit-column-gap: $arg;
+  -moz-column-gap: $arg;
+  column-gap: $arg;
+}
+@mixin column-rule($args...){
+  -webkit-column-rule: $args;
+  -moz-column-rule: $args;
+  column-rule: $args;
+}
+@mixin column-span($arg){
+  -webkit-column-span: $arg;
+  -moz-column-span: $arg;
+  column-span: $arg;
+}
+@mixin column-width($arg){
+  -webkit-column-width: $arg;
+  -moz-column-width: $arg;
+  column-width: $arg;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $ie: $opacity * 100;
+  filter: alpha(opacity=$ie); //IE8
+}
+
+
+
+
+@mixin background-size($args...){
+  -webkit-background-size: $args;
+  -moz-background-size:   $args;
+  background-size:  $args;
+}
+
+@mixin background-clip($parameters){
+  -webkit-background-clip : $parameters;
+  -moz-background-clip    : $parameters;
+  -ms-background-clip     : $parameters;
+  background-clip         : $parameters;}
+
+@mixin transition($parameters...){
+  -webkit-transition : $parameters;
+  -moz-transition    : $parameters;
+  -ms-transition     : $parameters;
+  transition         : $parameters;}
+
+@mixin perspective($parameters){
+  -webkit-perspective : $parameters;
+  -moz-perspective    : $parameters;
+  -ms-perspective     : $parameters;
+  perspective         : $parameters;}
+
+@mixin transition-delay($parameters){
+  -webkit-transition-delay : $parameters;
+  -moz-transition-delay    : $parameters;
+  -ms-transition-delay     : $parameters;
+  transition-delay         : $parameters;}
+
+@mixin transform($parameters...){
+  -webkit-transform : $parameters;
+  -moz-transform    : $parameters;
+  -ms-transform     : $parameters;
+  transform         : $parameters;}
+
+@mixin transform-origin($parameters){
+  -webkit-transform-origin : $parameters;
+  -moz-transform-origin    : $parameters;
+  -ms-transform-origin     : $parameters;
+  transform-origin         : $parameters;}
+
+@mixin animation-delay($parameters){
+  -webkit-animation-delay : $parameters;
+  -moz-animation-delay    : $parameters;
+  -ms-animation-delay     : $parameters;
+  animation-delay         : $parameters;}
+
+@mixin animation-fill-mode($parameters){
+  -webkit-animation-fill-mode : $parameters;
+  -moz-animation-fill-mode    : $parameters;
+  -ms-animation-fill-mode     : $parameters;
+  animation-fill-mode         : $parameters;}
+
+@mixin animation-play-state($parameters){
+  -webkit-animation-play-state : $parameters;
+  -moz-animation-play-state    : $parameters;
+  -ms-animation-play-state     : $parameters;
+  animation-play-state         : $parameters;}
+
+@mixin user-select($parameters){
+  -webkit-user-select : $parameters;
+  -moz-user-select    : $parameters;
+  user-select         : $parameters;}
+
+@mixin flex-flow($parameters...){
+  -webkit-flex-flow : $parameters;
+  -ms-flex-flow     : $parameters;
+  flex-flow         : $parameters;}
+@mixin flex-direction($parameters){
+  -webkit-flex-direction : $parameters;
+  -ms-flex-direction     : $parameters;
+  flex-direction         : $parameters;}
+@mixin flex-wrap($parameters){
+  -webkit-flex-wrap : $parameters;
+  -ms-flex-wrap     : $parameters;
+  flex-wrap         : $parameters;}
+@mixin justify-content($parameters){
+  -webkit-justify-content : $parameters;
+  -ms-justify-content     : $parameters;
+  justify-content         : $parameters;}
+@mixin order($parameters){
+  -webkit-order : $parameters;
+  -ms-order     : $parameters;
+  order         : $parameters;}
+@mixin align-self($parameters){
+  -webkit-align-self : $parameters;
+  -ms-align-self     : $parameters;
+  align-self         : $parameters;}
+@mixin align-items($parameters){
+  -webkit-align-items : $parameters;
+  -ms-align-items     : $parameters;
+  align-items         : $parameters;}
+@mixin align-content($parameters){
+  -webkit-align-content : $parameters;
+  -ms-align-content     : $parameters;
+  align-content         : $parameters;}
+
+
+@mixin keyframes($animation-name) {
+    @-o-keyframes #{$animation-name} {@content;}
+    @-webkit-keyframes #{$animation-name} {@content;}
+    @-moz-keyframes #{$animation-name} {@content;}
+    @keyframes #{$animation-name} {@content;}
+}

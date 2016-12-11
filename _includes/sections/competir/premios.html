@@ -1,0 +1,13 @@
+<main class="{% include style/2nd-col-classes.html %} panel panel-primary">
+    <div class="panel-heading"><strong>Premios</strong></div>
+    <div class="panel-body">
+{%capture text%}
+Cada año son premiados los mejores estudiante con **medallas de oro, plata y bronce**, dependiendo de su clasificación. Para cada problema, se hace reconocimiento a el primer competidor en resolver el problema por completo. Así mismo, el medallista más joven y la mejor puntuación femenina son reconocidos.
+
+Adicionalmente, se hace reconocimiento a las escuelas con maor número de medallas, así como a los entrenadores con mejor puntación promedio entre sus estudiantes.
+
+Los mejores competidores serán invitados a formar parte de los equipos de entrenamiento para <u>representar a Venezuela en las próximas IOI</u>.
+{%endcapture%}
+{{text|markdownify}}
+    </div>
+</main>

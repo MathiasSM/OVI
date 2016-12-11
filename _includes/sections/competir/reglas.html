@@ -1,0 +1,80 @@
+<main class="{% include style/2nd-col-classes.html %} panel panel-primary">
+    <div class="panel-heading"><strong>Reglas y Regulaciones</strong></div>
+    <div class="panel-body">
+{%capture text%}
+Tenga en cuenta que las reglas escritas a continuación están sujetas a cambios. Revise esta página con regularidad para estar al tanto. Cualquier cambio de último minuto será informado durante la bienvenida a los competidores.
+
+## Vestimenta y protocolo
+
+Se requiere que los estudiantes estén presentes a la hora del registro con sus uniformes escolares (solo la camisa es requerida), para marcar la atendencia y recoger su carnet. Luego del registro, se llavará a cabo una breve bienvenida a los competidores, con palabras de la ACI, para luego ser llevados a las salas de competencia.
+
+A la hora de la competencia, los _problemsets_ serán dados a los estudiantes de forma impresa, quienes tendrán 5 horas para individualmente desarrollar programas para su solución. Se proveerá merienda y bebidas a los estudiantes.
+
+Cualquier estudiante que se presente luego de 30 minutos de haber comenzado la competencia, o luego de que el primer estudiante haya salido de las salas (habiendo visto el _problemset_), será descalificado y no recibirá su Certificado de Participación.
+
+Los resultados serán anunciados el mismo día durante la ceremonia de premiación. Se requiere que los competidores atiendan a esta ceremonia.
+
+## Los Problemas / Tareas
+
+Todos los problemas de la OVI están diseñados para ser de naturaleza algoritmica. La meta es diseñar algoritmos correctos y eficientes que solucionen las tareas dadas.
+
+El enunciado de cada problema incluye los límites de tiempo de ejecución para cada corrida, el número de casos de prueba, y la puntuación para cada subtarea.
+
+## Los Programas
+
+Los lenguajes permitidos son C, C++, Java y Python. Los programas deben ser escritos en un solo archivo. Se tratará que operaciones de lectura y escritura sean sencillas para que se concentre la atención en los detalles algorítmicos. No serán necesarias funciones especiales de ninguna librería. No importa nada relacionado a gráficos, input por medio del mouse, manipulación de archivos o llamadas al sistema.
+
+Debes estar familiarizado con el lenguaje que utilices, así como alguno de los editores de texto o <abbr title="Integrated Development Environment">IDE</abbr>s a tu disposición. Conocimiento de opciones del compilador o el uso de los debuggers disponibles puede ser ventajoso.
+
+La única comunicación externa de tu programa debe ser leer de _standard input_, escribir a _standard output_ o el uso de alguna función externa en librerías especificadas en el enunciado del problema.
+
+### Input
+
+Los programas deben leer los datos como texto plano (ASCII), incluso si lo único que lee es un único valor. El competidor puede asumir que el formato del input de todo caso de prueba concuerda con el formato dado en el enunciado de los problemas y que ningún caso de prueba contiene errores.
+
+Para cada probelma se provee al menos un archivo de input de ejemplo (tanto en el enunciado como en la máquina). Sin embargo, la correcta ejecución del programa en el caso de ejemplo no garantiza de ninguna forma la correctitud del mismo.
+
+Ningún programa debe leer datos de archivo alguno.
+
+### Output
+
+Los programas deben imprimir sus respuestas a standard output como texto plano (ASCII) siguiendo el formato exacto especificado en el enunciado. El competidor NO debe incluir output propio (para debugguear, por ejemplo), pues eso no permitirá la correcta verificación de la solución.
+
+Ningún programa debe crear otros archivos durante su ejecución.
+
+## La Competencia
+
+### Inicio
+
+Al entrar a la sala de comptencias, la computadora debe estar encendida. Los _problemsets_ serán distribuídos al iniciar la competencia. Ningun competidor puede tocar el teclado antes de la señal de inicio.
+
+Está prohibido la comunicación entre competidores durante las 5 horas de competencia, dentro o fuera de las salas de competencias.
+
+### Preguntas y Asistencia
+
+Cualquier pregunta acerca de alguna ambigüedad en los enunciados debe ser presentada al jurado por medio del sistema de la computadora del competidor. Todo pregunta debe escritas como preguntas de verdadero/falso. Las únicas respuestas que se darán a los competidores serán: "Sí", "No", "Sin comentarios", "Respondido en el enunciado", "Pregunta inválida". La pregunta puede tomar un tiempo en ser atendida así que un competidor debe seguir trabajando mientras espera.
+
+Cualquier asistencia que sea requerida que NO tenga relación a los problemas, enunciados o la competencia en general (ir al baño, agua, problemas con la máquina), será efectuada por los supervisores de las salas.
+
+### Impresiones
+
+Puedes enviar a impresión cualquier archivo ASCII por medio del sistema de envío. Recibirás el código en físico cuando sea ejecutada.
+
+### Backups
+
+Todo envío de código queda guardado, por lo que en cualquier momento podrás recuperar copia pasadas de tus códigos, en el caso de alguna falla con la máquina. Se recomienda mantener backups regularmente.
+
+### Final de la competencia
+
+Se avisará cuando falten 15 minutos para le final de la competencia, y de nuevo cuando falten 5 minutos. En este momento es buena idea revisar si se han envíado las soluciones al sistema, con el formato correcto de output y sin output extra.
+
+Cuando se de la señal se debe inmediatamente dejar de trabajar. NO se deben apagar las computadoras.
+
+<hr />
+
+Recuerde que estas reglas están sujetas a cambios en cualquier momento.
+
+{%endcapture%}
+{{text|markdownify}}
+    </div>
+</main>
