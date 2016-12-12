@@ -1,6 +1,22 @@
 <main class="{% include style/2nd-col-classes.html %} panel panel-primary">
     <div class="panel-heading"><strong>Online Judges</strong></div>
     <div class="panel-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit asl, aliquam nec sao. Aenean felis ligula, blandit id nibh ullamcorper, facilisis pellentesque magna. Proin tortor nisl, aliquam nec sapien non, congue tempor velit. Donec efficitur egestas sem id finibus.</p>
+{%capture text%}
+Existe un infinidad de Jueces Online _(Online Judges)_ en donde competidores y programadores en general pueden verificar sus habilidades y practicar, para mejorar su propio rendimiento. Estos jueces son generalmente sitios web dedicados al mantenimineto de una o varias colecciones de problemas y al procesamiento de soluciones de sus usuarios. En los siguientes OJ podrás encontrar problemas de variada dificultad, para practicar:
+
++ [Codeforces](http://codeforces.com/)
++ [HackerRank](https://www.hackerrank.com/)
++ [mrJudge](http://dunjudge.me/)
++ [Sphere Online Judge](http://www.spoj.com/)
++ [UVa Online Judge](https://uva.onlinejudge.org/)
++ [TopCoder](http://www.topcoder.com/)
++ [URI Online Judge](https://www.urionlinejudge.com.br)
+
+Toda competencia de programación utiliza algún tipo de online judge. Los arriba mencionados son jueces disponibles al público general en formato no-competitivo. Sin embargo, algunos de los jueces mencionados organizan competencias, así como hay competencias que usan jueces no disponibles al público.
+
+**Las IOI no tienen un juez online activo para el envío de soluciones a problemas pasados.** Sin embargo, [mantienen un archivo de los problemas pasados](http://www.ioinformatics.org/contest/prev.shtml), con enunciados, _stubs_, los _sets_ de input y output que usaría un juez para verificar la correctitud del programa y editoriales de los problemas. Puede, entonces, usarse lo guardado en el archivo para practicar, verificando las soluciones manualmente.
+
+{%endcapture%}
+{{text|markdownify}}
     </div>
 </main>

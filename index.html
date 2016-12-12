@@ -75,8 +75,8 @@ premiacion:     2017-06-10 15:00 || Viernes 12 Oct 2018 - 15:00
 
         <!--RESULTADOS --------------------------------------------------------->
         {%assign section='resultados'%}
-        {%assign tabs = "lastyear, 2016, 2015" | split: ", " %}
-        {%assign tabt = "Último Año (2017), 2016, 2015" | split: ", " %}
+        {%assign tabs = "lastyear" | split: ", " %}
+        {%assign tabt = "Último Año (2017)" | split: ", " %}
         {%for tab in tabs%}
         <section role="tabpanel" class="tab-pane container-fluid row" id="{{section}}-{{tab}}">
             {% include menu-tab.html active=tab %}

@@ -1,7 +1,26 @@
 <main class="{% include style/2nd-col-classes.html %} panel panel-primary">
     <div class="panel-heading"><strong>Otras Competencias</strong></div>
     <div class="panel-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit asl, aliquam nec sapien non, congue tempor velit. Donec efficitur egestas sem id finibus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet vulputs malesuada, eros quis suscipit laoreet, turpis purus gravida urna, sit amet iet odio. Aenean felis ligula, blandit id nibh ullamcorper, facilisis pellentesque magna. Proin tortor nisl, aliquam nec sapien non, congue tempor velit. Donec efficitur egestas sem id finibus.</p>
+{%capture text%}
+Además de las OVI y las IOI, existen muchas competencias de programación a nivel mundial. Entre las más importantes tenemos las _ACM International Collegiate Programming Contest_ (**[ACM-ICPC](https://icpc.baylor.edu/)**), una de las competencias más antiguas, orientada a participantes universitarios, quienes participan en equipo, a diferencia de las [IOI](http://ioinformatics.org/), y en donde las tareas no son divididas en subtasks. Así, tenemos dos grandes estilos de competencias: El estilo IOI, y el estilo ICPC; el resto suele derivarse de ellos.
+
+Múltiples organizaciones y empresas de tecnología organizan competencias a nivel local, regional o mundial. Aquí listamos algunas de ellas que puedan ser de interés.
+
++ **[CodeChef](https://www.codechef.com/):** Organiza dos competencias principalles; el Cook-Off es una competencia mensual al estilo ICPC mientras que el Lunchtime es una competencia mensual al estio IOI. Así mismo, muchas otras competencias son organizadas alrededor del año, con distintos propósitos.
+
++ **[Codeforces](http://codeforces.com/):** Organiza "Rondas" regularmente, en dos divisiones principales, cuya diferencia es la dificultad de los problemas. Los usuarios de la plataforma son clasificados por color, dependiendo de su desempeño a lo largo de su tiempo usando la plataforma.
+
++ **[Facebook](https://www.facebook.com/pg/facebook/about/):** Organiza la [Hacker Cup](https://www.facebook.com/hackercup/), las cuales tienen un estilo similar a ICPC, pero que difieren principalmente en que cualquier lenguaje es permitido y que los participantes no reciben feedback de sus soluciones hasta después de terminada la competencia. Consiste en múltiples rondas online y una ronda final presencial.
+
++ **[Google](https://www.google.com/about/):** Organiza el [Code Jam](https://code.google.com/codejam/), que tienen un estilo similar a IOI, con un puntaje diferente para cada subtask. Sin embargo, el último subtask (el de más valor) de cada problema no dará feedback al competidor hasta después de terminada la competencia y tendrá límites en cuanto al envío de soluciones.
+
++ **[HackerRank](https://www.hackerrank.com):** Organiza varios tipos de competencias y es una plataforma donde cualquier persona u organización puede organizar sus competencias (empresas como Twitter usan esta plataforma como exámenes técnicos a aspirantes). Las competencias propias de HackerRank más importantes son las _"Week of Code"_, en donde durante una semana cada día es liberado un nuevo problema para los competidores resolver.
+
++ **[Red de Programación Competitiva](http://redprogramacioncompetitiva.com/)**: Organiza alrededor de 12 "actividades" al año, que no son más que competencias estilo ICPC, para el entrenamiento de equipos latinoamericanos. Algunas de estas competencias son  clasificatorias nacionales oficiales, mientras que otras son puramente material de entrenamiento.
+
+Existen otras competencias. Entre ellas destacamos las eliminatorias IOI de diferentes países, algunas de ellas abiertas para la participación no-oficial de cualquier persona en el mundo. Actualmente, las OVI no son abiertas para la participación no-oficial.
+
+{%endcapture%}
+{{text|markdownify}}
     </div>
 </main>
