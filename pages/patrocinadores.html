@@ -1,0 +1,21 @@
+---
+permalink: /patrocinadores/
+---
+<!DOCTYPE html>
+<html lang="es">
+{%include header.html%}
+<body>
+    <div>
+    {% include menu-main.html active='patrocinadores' %}
+    <div class="tab-content">
+
+        {%assign section='patrocinadores'%}
+        <section class="container-fluid row" id="{{section}}">
+        {% include sections/patrocinadores.html %}
+        </section>
+    </div>
+    {%include footer.html%}
+    {%include js.html%}
+    </div>
+</body>
+</html>

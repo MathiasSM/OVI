@@ -1,0 +1,28 @@
+---
+permalink: /entrenar/
+---
+<!DOCTYPE html>
+<html lang="es">
+{%include header.html%}
+<body>
+    <div>
+    {% include menu-main.html active='entrenar' %}
+    <div class="tab-content">
+
+        {%assign cur=1%}
+        {%assign section='entrenar'%}
+        {%assign tabs = "past, oj, otras, libros, extra" | split: ", " %}
+        {%assign tabt = "Problemas Pasados, Online Judges, Otras Competencias, Libros, Enlaces de Interés" | split: ", " %}
+        {%for tab in tabs%}
+        <section role="tabpanel" class="{%if cur == 1%}active {%assign cur=0%}{%endif%}tab-pane container-fluid row" id="{{section}}-{{tab}}">
+            {% include menu-tab.html active=tab %}
+            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
+            {% include {{content}} %}
+        </section>
+        {%endfor%}
+    </div>
+    {%include footer.html%}
+    {%include js.html%}
+    </div>
+</body>
+</html>

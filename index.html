@@ -29,7 +29,7 @@ premiacion:     2017-06-10 15:00 || Viernes 12 Oct 2018 - 15:00
                         <article class="noticia">
                             <h2>{{post.title}}</h2>
                             {{post.content}}
-                            <time datetime="{{post.date | date: %Y-%m-%d}}">{{post.date  | date: "%d-%m-%Y"}}</time>
+                            <time datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date  | date: "%d-%m-%Y"}}</time>
                         </article>
                         {%endfor%}
                     </div>
@@ -37,59 +37,6 @@ premiacion:     2017-06-10 15:00 || Viernes 12 Oct 2018 - 15:00
             </main>
         </section>
 
-        <!--ABOUT --------------------------------------------------------->
-        {%assign section='about'%}
-        {%assign tabs = "ovi, ioi, patrocinadores" | split: ", " %}
-        {%assign tabt = "Sobre las OVI, Sobre las IOI, Patrocinadores" | split: ", " %}
-        {%for tab in tabs%}
-        <section role="tabpanel" class="tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
-            {% include {{content}} %}
-        </section>
-        {%endfor%}
-
-        <!--COMPETIR --------------------------------------------------------->
-        {%assign section='competir'%}
-        {%assign tabs = "programa, elegibilidad, premios, reglas, comite, ambiente" | split: ", " %}
-        {%assign tabt = "Programa, Elegibilidad, Premios, Reglas, Comité Organizador, Ambiente de Programación" | split: ", " %}
-        {%for tab in tabs%}
-        <section role="tabpanel" class="tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
-            {% include {{content}} %}
-        </section>
-        {%endfor%}
-
-        <!--ENTRENAR --------------------------------------------------------->
-        {%assign section='entrenar'%}
-        {%assign tabs = "past, oj, otras, libros, extra" | split: ", " %}
-        {%assign tabt = "Problemas Pasados, Online Judges, Otras Competencias, Libros, Enlaces de Interés" | split: ", " %}
-        {%for tab in tabs%}
-        <section role="tabpanel" class="tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
-            {% include {{content}} %}
-        </section>
-        {%endfor%}
-
-        <!--RESULTADOS --------------------------------------------------------->
-        {%assign section='resultados'%}
-        {%assign tabs = "lastyear" | split: ", " %}
-        {%assign tabt = "Último Año (2017)" | split: ", " %}
-        {%for tab in tabs%}
-        <section role="tabpanel" class="tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
-            {% include {{content}} %}
-        </section>
-        {%endfor%}
-
-        <!--CONTACTO --------------------------------------------------------->
-        {%assign section='contacto'%}
-        <section class="tab-pane container-fluid row" id="{{section}}">
-        {% include sections/contacto.html %}
-        </section>
 
     </div>
     {%include footer.html%}

@@ -1,14 +1,14 @@
 <!-- BEGIN DOWNLOAD PANEL -->
 <div class="panel panel-default well">
     <div class="panel-body">
-        <form action="" class="form-horizontal" id="contanto-form">
+        <form method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3" class="form-horizontal" id="contanto-form">
             <div class="form-group">
                 <div class="col-sm-6">
                     <div class="input-group">
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-user"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nombre y Apellido" name="Nombre" tabindex="1" maxlength="40" required="required">
+                        <input type="text" class="form-control" placeholder="Nombre y Apellido" name="nombre" tabindex="1" maxlength="40" required="required">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -16,7 +16,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-fullscreen"></span>
                         </div>
-                        <select class="form-control" name="¿Qué eres?" tabindex="5" requiered="required">
+                        <select class="form-control" name="tipo" tabindex="2" requiered="required">
                             <option value="">¿Qué eres?</option>
                             <option value="Estudiante">Estudiante</option>
                             <option value="Profesor">Profesor</option>
@@ -34,7 +34,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-envelope"></span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Correo electrónico" name="Email"  tabindex="3" maxlength="35" required="required">
+                        <input type="email" class="form-control" placeholder="Correo electrónico" name="correo"  tabindex="3" maxlength="35" required="required">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -42,7 +42,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-education"></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Escuela/Universidad" name="Escuela"  tabindex="4" maxlength="55">
+                        <input type="text" class="form-control" placeholder="Escuela/Universidad" name="escuela"  tabindex="4" maxlength="55">
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-globe"></span>
                         </div>
-                        <select class="form-control" name="Estado" tabindex="5">
+                        <select class="form-control" name="estado" tabindex="5">
                             <option value="">¿De dónde eres?</option>
                             <option value="Extranjero">-No soy de Venezuela-</option>
                             <option value="Amazonas">Amazonas</option>
@@ -88,7 +88,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-phone"></span>
                         </div>
-                        <input type="tel" class="form-control" placeholder="Teléfono" name="Teléfono"  tabindex="6" size="11">
+                        <input type="tel" class="form-control" placeholder="Teléfono" name="telefono"  tabindex="6" size="11">
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-comment glyphicon-2"></span>
                         </div>
-                        <textarea class="form-control" name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí"  tabindex="7" required="required"></textarea>
+                        <textarea class="form-control" name="message" rows="5" placeholder="Escribe tu mensaje aquí"  tabindex="7" required="required"></textarea>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,33 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="es">
+{%include header.html%}
+<body>
+    <div>
+    {% include menu-main.html active='none' %}
+    <div class="tab-content">
+
+        {%assign section='404'%}
+        <section class="container-fluid row" id="{{section}}">
+            <main class="col-sm-12 panel panel-primary">
+                <div class="panel-heading"><strong>404: No encontrado</strong></div>
+                <div class="panel-body">
+                    <p class="lead">Has buscado algo que no se encuentra aquí.</p>
+                    <p>Pudo haber pasado por varias razones.</p>
+                    <ul>
+                        <li>Colocaste una URL que no existe y nunca existió.</li>
+                        <li>Colocaste una URL que no existe, pero existió... ¡Lo sentimos!</li>
+                        <li>Alguna web hizo un mal enlace a nosotros.</li>
+                        <li>Nosotros hicimos un mal enlace... <a href="/contacto" title="Haznos saber qué link está roto">¡Avísanos!</a></li>
+                    </ul>
+                </div>
+            </main>
+        </section>
+    </div>
+    {%include footer.html%}
+    {%include js.html%}
+    </div>
+</body>
+</html>

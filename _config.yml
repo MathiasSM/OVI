@@ -1,9 +1,26 @@
-title: "Olímpiada Venezolana de Informática"
-homeurl: ""
-description: ""
+title: "Olimpíada Venezolana de Informática"
+description: "Competencia anual de programación para estudiantes de bachillerato."
+author: "Asociación Venezolana de Competencias Informáticas"
+
+twitter:
+    username: ACInformaticas
+
+facebook:
+    app_id:
+    publisher:
+    admins:
+
+logo: logo.png
+
+social:
+  links:
+    - https://twitter.com/ACInformaticas
+
+google_site_verification:
 
 permalink: /:categories/:title/
 encoding: "utf-8"
+timezone: "America/Caracas"
 
 markdown: kramdown
 
@@ -13,6 +30,7 @@ kramdown:
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 sass:
   sass_dir: _sass
