@@ -1,6 +1,7 @@
 title: "Olimpíada Venezolana de Informática"
 description: "Competencia anual de programación para estudiantes de bachillerato."
-author: "Asociación Venezolana de Competencias Informáticas"
+author: mathiassm
+url:
 
 twitter:
     username: ACInformaticas
@@ -18,7 +19,7 @@ social:
 
 google_site_verification:
 
-permalink: /:categories/:title/
+permalink: /:title/
 encoding: "utf-8"
 timezone: "America/Caracas"
 
