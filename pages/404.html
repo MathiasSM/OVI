@@ -7,9 +7,7 @@ permalink: /404.html
 <body>
     <div>
     {% include menu-main.html active='none' %}
-    <div class="tab-content">
-
-        {%assign section='404'%}
+    <div class="tab-content">{%assign section='404'%}
         <section class="container-fluid row" id="{{section}}">
             <main class="col-sm-12 panel panel-primary">
                 <div class="panel-heading"><strong>404: No encontrado</strong></div>
@@ -26,8 +24,8 @@ permalink: /404.html
             </main>
         </section>
     </div>
-    {%include footer.html%}
-    {%include js.html%}
-    </div>
+{%include footer.html%}
+{%include js.html%}
+</div>
 </body>
 </html>

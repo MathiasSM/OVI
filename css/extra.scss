@@ -84,28 +84,24 @@ main.noticias{
 footer.main-footer{
     background: #337ab7;
     padding:2em 2em 0;
-    text-align:center;
+    text-align:left;
     min-height:250px;
     & h3{font-size:1.3em;}
     & p{font-size:.8em;}
     & .copyright{
         font-size:.9em;
         color:#fff;
-        margin-top:2em;
+        margin-top:1em;
         display:block;
         padding-bottom:1em;
     }
-    &:first-child , &:first-child  {text-align:right;}
     & .img-wrapper{
-        & div{
+        & > div{
             @include flex(1 0 30%);
             color:#fff;
-            padding:1em;
+            padding:.2em 1em;
             margin:0 .3%;
-            &:last-child{border-left:.1em #539ad7 solid;text-align:left;}
-            &:first-child p, &:first-child h3 {@include flex-direction(row-reverse);text-align:right;}
-            & h3 {margin-bottom:1.3em;}
-            & p {
+            & div {
                 @include flexify;
                 @include flex-direction(row);
                 @include flex-wrap(wrap);
@@ -118,12 +114,13 @@ footer.main-footer{
                 }
                 & a {display:inline-block;}
             }
+            & h3 {margin-bottom:1em;}
         }
         & img{margin:.5em;}
         & a.pat-more{height:100px;}
         & span{color:$color-light;line-height:100px;}
         @include flexify;
-        @include flex-direction(row);
+        @include flex-direction(column);
         @include flex-wrap(nowrap);
         @include justify-content(center);
         @include align-content(center);
@@ -202,6 +199,24 @@ section.tabpanel{padding-right:5%;padding-left:5%;}
         & p:first-child{@include flex(1 0 30%);text-align:left;}
         & p:last-child{@include flex(0 1 70%);;padding-left:2em;}
         margin-bottom:1em;
+    }
+    footer.main-footer{
+        padding:2em 2em 0;
+        & .copyright{
+            margin-top:2em;
+            padding-bottom:1em;
+        }
+        &:first-child , &:first-child  {text-align:right;}
+        & .img-wrapper{
+            & > div{
+                padding:1em;
+                margin:0 .3%;
+                &:last-child{border-left:.1em #539ad7 solid;text-align:left;}
+                &:first-child div, &:first-child h3 {@include flex-direction(row-reverse);text-align:right;}
+                & h3 {margin-bottom:1.3em;}
+            }
+            @include flex-direction(row);
+        }
     }
 }
 @media (min-width: 1200px) { //Normal screens

@@ -7,22 +7,17 @@ permalink: /about/
 <body>
     <div>
     {% include menu-main.html active='about' %}
-    <div class="tab-content">
-
-        {%assign cur=1%}
-        {%assign section='about'%}
+    <div class="tab-content">{%assign cur=1%}{%assign section='about'%}
         {%assign tabs = "ovi, ioi" | split: ", " %}
         {%assign tabt = "Sobre las OVI, Sobre las IOI" | split: ", " %}
         {%for tab in tabs%}
         <section role="tabpanel" class="{%if cur == 1%}active {%assign cur=0%}{%endif%}tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab extraURL='/patrocinadores' extraT='Patrocinadores' %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
+            {% include menu-tab.html active=tab extraURL='/patrocinadores' extraT='Patrocinadores' %}{%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
             {% include {{content}} %}
-        </section>
-        {%endfor%}
+        </section>{%endfor%}
     </div>
-    {%include footer.html%}
-    {%include js.html%}
-    </div>
+{%include footer.html%}
+{%include js.html%}
+</div>
 </body>
 </html>

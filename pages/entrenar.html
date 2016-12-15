@@ -7,10 +7,7 @@ permalink: /entrenar/
 <body>
     <div>
     {% include menu-main.html active='entrenar' %}
-    <div class="tab-content">
-
-        {%assign cur=1%}
-        {%assign section='entrenar'%}
+    <div class="tab-content">{%assign cur=1%}{%assign section='entrenar'%}
         {%assign tabs = "past, oj, otras, libros, extra" | split: ", " %}
         {%assign tabt = "Problemas Pasados, Online Judges, Otras Competencias, Libros, Enlaces de Interés" | split: ", " %}
         {%for tab in tabs%}
@@ -18,11 +15,10 @@ permalink: /entrenar/
             {% include menu-tab.html active=tab %}
             {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
             {% include {{content}} %}
-        </section>
-        {%endfor%}
+        </section>{%endfor%}
     </div>
-    {%include footer.html%}
-    {%include js.html%}
-    </div>
+{%include footer.html%}
+{%include js.html%}
+</div>
 </body>
 </html>

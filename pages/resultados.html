@@ -7,22 +7,17 @@ permalink: /resultados/
 <body>
     <div>
     {% include menu-main.html active='resultados' %}
-    <div class="tab-content">
-
-        {%assign cur=1%}
-        {%assign section='resultados'%}
+    <div class="tab-content">{%assign cur=1%}{%assign section='resultados'%}
         {%assign tabs = "lastyear" | split: ", " %}
         {%assign tabt = "Último Año (2017)" | split: ", " %}
         {%for tab in tabs%}
         <section role="tabpanel" class="{%if cur == 1%}active {%assign cur=0%}{%endif%}tab-pane container-fluid row" id="{{section}}-{{tab}}">
-            {% include menu-tab.html active=tab %}
-            {%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
+            {% include menu-tab.html active=tab %}{%assign content='sections/' | append: section | append: '/' | append: tab | append: '.html'%}
             {% include {{content}} %}
-        </section>
-        {%endfor%}
+        </section>{%endfor%}
     </div>
-    {%include footer.html%}
-    {%include js.html%}
-    </div>
+{%include footer.html%}
+{%include js.html%}
+</div>
 </body>
 </html>

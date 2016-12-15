@@ -7,15 +7,13 @@ permalink: /contacto/
 <body>
     <div>
     {% include menu-main.html active='contacto' %}
-    <div class="tab-content">
-
-        {%assign section='contacto'%}
+    <div class="tab-content">{%assign section='contacto'%}
         <section class="container-fluid row" id="{{section}}">
         {% include sections/contacto.html %}
         </section>
     </div>
-    {%include footer.html%}
-    {%include js.html%}
-    </div>
+{%include footer.html%}
+{%include js.html%}
+</div>
 </body>
 </html>
