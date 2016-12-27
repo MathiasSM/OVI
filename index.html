@@ -2,45 +2,35 @@
 registro:       2017-06-10 23:59 || Hasta el 10 Jun 2018 - 23:59
 competencia:    2017-06-10 08:00 || Viernes 12 Oct 2018 - 08:00
 premiacion:     2017-06-10 15:00 || Viernes 12 Oct 2018 - 15:00
+periodo-actual: 2016-2017
+
+layout: minimal
 ---
-<!DOCTYPE html>
-<html lang="es">
-{%include header.html%}
-<body>
-    <div>
-    {% include menu-main.html %}
-    <div class="tab-content">
-        <!--HOME PAGE - FECHAS Y NOTICIAS IMPORTANTES-->
-        <section role="tabpanel" class="tab-pane active" id="home">
-            <header class="container-fluid main-header">
-                <img class="sitio-logo center-block" src="logo.png" height="300px">
-                <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Informática</h1>
-            </header>
-            <section class="container-fluid fechas">
-                <div class="fecha fecha1"><h2>Registro</h2><time datetime="{{page.registro | split: '||' | first}}">{{page.registro | split: '||' | last}}</time></div>
-                <div class="fecha fecha2"><h2>Competencia</h2><time datetime="{{page.competencia | split: '||' | first}}">{{page.competencia | split: '||' | last}}</time></div>
-                <div class="fecha fecha3"><h2>Premiación</h2><time datetime="{{page.premiacion | split: '||' | first}}">{{page.premiacion | split: '||' | last}}</time></div>
-            </section>
-            <main class="container-fluid noticias">
-                <div class="panel panel-primary">
-                    <div class="panel-heading"><strong><span class="panel-title">Noticias</span></strong></div>
-                    <div class="panel-body">
-                        {%for post in site.posts%}
-                        <article class="noticia">
-                            <h2>{{post.title}}</h2>
-                            {{post.content}}
-                            <time datetime="{{post.date | date: "%Y-%m-%d"}}">{{post.date  | date: "%d-%m-%Y"}}</time>
-                        </article>
-                        {%endfor%}
-                    </div>
-                </div>
-            </main>
+{% include utils/menu-main.html %}
+<div class="tab-content">
+    <!--HOME PAGE - FECHAS Y NOTICIAS IMPORTANTES-->
+    <section role="tabpanel" class="tab-pane active" id="home">
+        <header class="container-fluid main-header">
+            <img class="sitio-logo center-block" src="/images/ovi-logo.png" height="300px">
+            <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Informática</h1>
+        </header>
+        <section class="container-fluid fechas">
+            <div class="fecha fecha1"><h2>Registro</h2><time datetime="{{page.registro | split: '||' | first}}">{{page.registro | split: '||' | last}}</time></div>
+            <div class="fecha fecha2"><h2>Competencia</h2><time datetime="{{page.competencia | split: '||' | first}}">{{page.competencia | split: '||' | last}}</time></div>
+            <div class="fecha fecha3"><h2>Premiación</h2><time datetime="{{page.premiacion | split: '||' | first}}">{{page.premiacion | split: '||' | last}}</time></div>
         </section>
-
-
-    </div>
-{%include footer.html%}
-{%include js.html%}
+        <main class="container-fluid noticias">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><strong><span class="panel-title">Noticias</span></strong></div>
+                <div class="panel-body">
+                    {%assign news = site.news | sort: 'title' | sort: 'date' %}{%for item in news%}{%if item.period == page.periodo-actual and item.draft != true %}
+                    <article class="noticia">
+                        <h2>{{item.title}}</h2>
+                        {{item.content}}
+                        <time datetime="{{post.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
+                    </article>{%endif%}{%endfor%}
+                </div>
+            </div>
+        </main>
+    </section>
 </div>
-</body>
-</html>

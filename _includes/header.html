@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{%seo%}
+<title>{{page.fname}} {{page.lname}} - {{site.title}}</title>
+{%if page.layout == "1col-member"%}{%seo title=false%}{%else%}{%seo%}{%endif%}
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/extra.min.css">
-{%include style/favicons.html%}
+{%if page.layout == "1col-member"%}<link rel="stylesheet" href="/css/social-colors.min.css">{%endif%}{%include style/favicons.html%}
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

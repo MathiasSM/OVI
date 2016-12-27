@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+{%include header.html%}
+<body>
+<div>{% assign filename = page.path | split:'/' | last | split: '.' | first %}
+{% include utils/menu-main.html active=filename %}
+<div class="tab-content">{%assign cur=1%}{%assign tabs = page.menu-slugs | split: ", " %}{%assign tabt = page.menu-titles | split: ", " %}
+{%for tab in tabs%}
+<section role="tabpanel" class="{%if cur == 1%}active {%assign cur=0%}{%endif%}tab-pane container-fluid row" id="{{filename}}-{{tab}}">
+{% include utils/menu-tab.html active=tab extraURL=page.extraURL extraT=page.extraURLT %}{%assign content='sections/' | append: filename | append: '/' | append: tab | append: '.html'%}
+{% include {{content}} %}
+</section>{%endfor%}
+</div>
+{%include footer.html%}
+{%include utils/js.html%}
+</div>
+</body>
+</html>

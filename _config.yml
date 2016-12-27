@@ -1,7 +1,10 @@
 title: "Olimpíada Venezolana de Informática"
 description: "Competencia anual de programación para estudiantes de bachillerato."
 author: mathiassm
-url:
+url: http://ovi.github.io
+permalink:
+encoding: "utf-8"
+timezone: "America/Caracas"
 
 twitter:
     username: ACInformaticas
@@ -19,10 +22,6 @@ social:
 
 google_site_verification:
 
-permalink: /:title/
-encoding: "utf-8"
-timezone: "America/Caracas"
-
 markdown: kramdown
 
 kramdown:
@@ -36,3 +35,9 @@ gems:
 sass:
   sass_dir: _sass
   style: :compressed
+
+collections:
+    miembros:
+        output: true
+        permalink: /:collection/:path/
+    news:

@@ -1,4 +1,4 @@
-@import 'var';
+@import 'var';@import 'social-colors';
 
 *{font-family: $font-base;;}
 html,body{height:100%;}
@@ -33,6 +33,16 @@ nav a.list-group-item{padding:0;& span{display:block; padding: 10px 15px;}}
 main.panel {padding:0;}
 .row{margin:0;}
 .main-nav li.ctc {margin-top:7px; ;& a.ctc{padding: .5em;}}
+
+a.social-link {
+    svg{
+        height:1em;
+        vertical-align:middle;
+        margin:.2em .5em;
+        @include opacity(.8);
+    }
+    &:hover svg, &:active svg{@include opacity(1);}
+}
 
 header.main-header {
     min-height:0;
