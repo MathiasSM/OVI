@@ -30,9 +30,11 @@ nav a.list-group-item{padding:0;& span{display:block; padding: 10px 15px;}}
 .navbar{margin-bottom:10px;}
 .menu-tabs{min-height:50px;margin:0;}
 .menu-toggle{width:100%;border:none;&:hover,&:active,&:focus,&visited{background:none;}}
-main.panel {padding:0;}
+.panel {padding:0;}
 .row{margin:0;}
 .main-nav li.ctc {margin-top:7px; ;& a.ctc{padding: .5em;}}
+.push-down{margin-bottom:1em;}
+.panel-heading h2{font-size:14px;line-height:1.42857143;font-weight:700;margin:0;display:inline-block;}
 
 a.social-link {
     svg{

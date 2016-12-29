@@ -1,10 +1,9 @@
 <aside class="col-sm-3 col-md-2 navbar menu-tabs">
-    <button type="button" class="btn btn-default menu-toggle" data-toggle="collapse" data-target=".menu-collapse">
-    <span class="glyphicon glyphicon-chevron-down"></span>
-    </button>
-    <nav class="list-group collapse menu-collapse" role="tablist" aria-multiselectable="true">
-        {%assign i=0%}
-        {%for tab in tabs%}<a href="#{{filename}}-{{tab}}" data-target=".menu-collapse.in" class="list-group-item{%if include.active == tab%} active{%endif%}" aria-controls="{{filename}}-{{tab}}" role="tab" data-toggle="collapse" ><span data-toggle="tab" data-target="#{{filename}}-{{tab}}">{{tabt[i]}}</span></a>
-        {%assign i = i | plus:1%}{%endfor%}{%if include.extraURL%}<a href="{{include.extraURL}}" class="list-group-item"><span>{{include.extraT}}</span></a>{%endif%}
-    </nav>
+<button type="button" class="btn btn-default menu-toggle" data-toggle="collapse" data-target=".menu-collapse">
+<span class="glyphicon glyphicon-chevron-down"></span>
+</button>
+<nav class="list-group collapse menu-collapse" role="tablist">{%assign i=0%}
+    {%for tab in tabs%}<a href="#{{filename}}-{{tab}}" data-target=".menu-collapse.in" class="list-group-item{%if include.active == tab%} active{%endif%}" aria-controls="{{filename}}-{{tab}}" role="tab" data-toggle="collapse" ><span data-toggle="tab" data-target="#{{filename}}-{{tab}}">{{tabt[i]}}</span></a>
+    {%assign i = i | plus:1%}{%endfor%}{%if include.extraURL%}<a href="{{include.extraURL}}" class="list-group-item"><span>{{include.extraT}}</span></a>{%endif%}
+</nav>
 </aside>

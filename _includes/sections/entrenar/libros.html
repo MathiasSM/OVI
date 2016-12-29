@@ -1,6 +1,6 @@
-<main class="{% include style/2nd-col-classes.html %} panel panel-primary">
-    <div class="panel-heading"><strong>Libros</strong></div>
-    <div class="panel-body">
+<section class="{% include style/2nd-col-classes.html %} panel panel-primary">
+<div class="panel-heading"><h2>Libros</h2></div>
+<div class="panel-body">
 {%capture text%}
 En esta página se listan algunos libros de interés para aquellos que quieran aprender sobre informática, entrenar para este tipo de competencias, o reforzar conocimientos en algún área cercana a la programación. Se señala el tema principal de cada libro en su descripción.
 
@@ -9,35 +9,35 @@ En esta página se listan algunos libros de interés para aquellos que quieran a
 {%capture CP3%}
 Autoproclamado "cota inferior" de la programación competitiva, es seguramente una buena guía de entrenamiento. Cubre todos los temas esenciales de la programación competetitiva, muestra problemas, soluciones y provee consejos. Es usado tanto para ACM-ICPC como para IOI.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='Competitive Programming 3' autor='Steven  Halim &amp; Felix Halim' editorial='Lulu, 2013' tag='Programación Competitiva' descripcion=CP3%}
+{%include utils/libro-flex.html titulo='Competitive Programming 3' autor='Steven  Halim &amp; Felix Halim' editorial='Lulu, 2013' tag='Programación Competitiva' descripcion=CP3%}
 
 {%capture text%}
 Contiene más de 100 problemas, seleccionados por ser interesantes, divertidos o satisfactoriamente difíciles, del Online Judge de la Universidad de Valladolid (UVa). Están organizados por temas y tiene suficiente información para darte un idea de como resolverlos.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='Programming Challenges: The Programming Contest Training Manual' autor='Steven Skiena and Miguel Revilla' editorial='Springer-Verlag, 2003' tag='Programación Competitiva' descripcion=text%}
+{%include utils/libro-flex.html titulo='Programming Challenges: The Programming Contest Training Manual' autor='Steven Skiena and Miguel Revilla' editorial='Springer-Verlag, 2003' tag='Programación Competitiva' descripcion=text%}
 
 {%capture text%}
 Presenta numerorsos problemas y sus soluciones, tomados de una serie de compentencias a nivel escolar realizadas en Eslovenia.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='Problems in Programming: Experience through Practice' autor='Andrej Vitek et al.' editorial='John Wiley &amp; Sons, 1991' tag='Programación Competitiva' descripcion=text%}
+{%include utils/libro-flex.html titulo='Problems in Programming: Experience through Practice' autor='Andrej Vitek et al.' editorial='John Wiley &amp; Sons, 1991' tag='Programación Competitiva' descripcion=text%}
 
 {%capture text%}
 Una excelente introducción a algoritmos básicos. Contiene pseudo códigos y explicaciones extensas de cada tema.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='Introduction to Algorithms (3rd Edition)' autor='Thomas H. Cormen, Charles E. Leiserson, and Ronald L. Rivest, Clifford Stein' editorial='The MIT Press / McGraw-Hill, 2001' tag='Algoritmos' descripcion=text%}
+{%include utils/libro-flex.html titulo='Introduction to Algorithms (3rd Edition)' autor='Thomas H. Cormen, Charles E. Leiserson, and Ronald L. Rivest, Clifford Stein' editorial='The MIT Press / McGraw-Hill, 2001' tag='Algoritmos' descripcion=text%}
 
 {%capture text%}
 Un libro conciso sobre combinatoria, además de otros temas más avanzados.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='Elementos de Teoría Combinatoria' autor='Vicente Yriarte' editorial='Universidad Simón Bolívar, 1996' tag='Combinatoria' descripcion=text%}
+{%include utils/libro-flex.html titulo='Elementos de Teoría Combinatoria' autor='Vicente Yriarte' editorial='Universidad Simón Bolívar, 1996' tag='Combinatoria' descripcion=text%}
 
 {%capture text%}
 La biblia de la programación.
 {%endcapture%}
-{%include sections/entrenar/libro-flex.html titulo='The Art of Computer Programming' autor='Donald E. Knuth' editorial='Addison-Wesley' tag='Programación' descripcion=text%}
+{%include utils/libro-flex.html titulo='The Art of Computer Programming' autor='Donald E. Knuth' editorial='Addison-Wesley' tag='Programación' descripcion=text%}
 
 
 {%endcapture%}
 {{text|markdownify}}
-    </div>
-</main>
+</div>
+</section>

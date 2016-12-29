@@ -4,15 +4,13 @@
 <body>
 <div>{% assign filename = page.path | split:'/' | last | split: '.' | first %}
 {% include utils/menu-main.html active=filename %}
-<div class="tab-content">
-<section class="container-fluid row" id="{{filename}}">
-<main class="col-sm-12 panel panel-primary">
-<div class="panel-heading"><strong>{{page.title}}</strong></div>
+<div class="container-fluid row">
+<main class="tab-content panel panel-primary" id="{{filename}}">
+<div class="panel-heading"><h2>{{page.title}}</h2></div>
 <div class="panel-body">{%assign toinclude = "sections/" | append: filename | append: ".html" %}
 {%include {{toinclude}}%}
 </div>
 </main>
-</section>
 </div>
 {%include footer.html%}
 {%include utils/js.html%}

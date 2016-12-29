@@ -11,7 +11,7 @@ layout: minimal
     <!--HOME PAGE - FECHAS Y NOTICIAS IMPORTANTES-->
     <section role="tabpanel" class="tab-pane active" id="home">
         <header class="container-fluid main-header">
-            <img class="sitio-logo center-block" src="/images/ovi-logo.png" height="300px">
+            <img class="sitio-logo center-block" src="/images/ovi-logo.png" height="300" alt="OVI">
             <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Informática</h1>
         </header>
         <section class="container-fluid fechas">
@@ -27,7 +27,7 @@ layout: minimal
                     <article class="noticia">
                         <h2>{{item.title}}</h2>
                         {{item.content}}
-                        <time datetime="{{post.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
+                        <time datetime="{{item.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
                     </article>{%endif%}{%endfor%}
                 </div>
             </div>

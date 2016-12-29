@@ -4,19 +4,16 @@
 <body>
 <div>{% assign filename = page.path | split:'/' | last | split: '.' | first %}
 {% include utils/menu-main.html active=filename %}
-<div class="tab-content">
-<section class="container-fluid row" id="{{filename}}">
-<main class="col-sm-8 col-sm-offset-2 panel panel-primary">
-<div class="panel-heading"><strong>{{page.fname}} {{page.lname}}</strong> ({{page.cargo}}, {{page.ocupacion}})</div>
+<main class="tab-content container-fluid row col-sm-8 col-sm-offset-2 panel panel-primary" id="{{filename}}">
+<div class="panel-heading"><h2>{{page.fname}} {{page.lname}}</h2> ({{page.cargo}}, {{page.ocupacion}})</div>
 <div class="panel-body">
-{{content}}<hr />
-<ul class="list-inline">{%for item in page.social%}
+<div class="row"><div class="col-sm-2"><img src="{{page.avatar}}" class="img-responsive img-thumbnail center-block push-down" alt="{{page.fname}} {{page.lname}}"></div><div class="col-sm-10">{{content}}</div></div>
+<hr />
+<ul class="list-inline text-center">{%for item in page.social%}
 <li class="list-inline-item"><a class="color-brand-{{item.site}} social-link" href="{{item.link}}">{%assign icon="utils/icons/" | append: item.site | append: ".svg"%}{%include {{icon}}%}{{item.display}}</a>{%endfor%}
 </ul>
 </div>
 </main>
-</section>
-</div>
 {%include footer.html%}
 {%include utils/js.html%}
 </div>

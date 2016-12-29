@@ -1,6 +1,10 @@
+<div id="messages" class="hide" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <div id="messages_content"></div>
+</div>
 <div class="panel panel-default well">
     <div class="panel-body">
-        <form method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3" class="form-horizontal" id="contanto-form">
+        <form class="form-horizontal" id="contacto-form" method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3">
             <div class="form-group">
                 <div class="col-sm-6">
                     <div class="input-group">
@@ -15,7 +19,7 @@
                         <div class="input-group-addon">
                             <span class="glyphicon glyphicon-fullscreen"></span>
                         </div>
-                        <select class="form-control" name="tipo" tabindex="2" requiered="required">
+                        <select class="form-control" name="tipo" tabindex="2" required="required">
                             <option value="">¿Qué eres?</option>
                             <option value="Estudiante">Estudiante</option>
                             <option value="Profesor">Profesor</option>
@@ -103,10 +107,28 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-12">
-                    <button type="submit" class="btn btn-default btn-info"  tabindex="8">Enviar</button>
+                    <button type="submit" id="send" class="btn btn-primary"  tabindex="8">Enviar</button>
                 </div>
             </div>
             <input type="hidden" value="">
         </form>
     </div>
 </div>
+<script>
+$('form#contacto-form').submit( function(e) {
+    var url = $(this).attr('action');
+    $.ajax({
+        url: "https://getsimpleform.com/messages/ajax?form_api_token=79bf29870a0336fa2295ac7b3496f0e3",
+        type: 'post',
+        dataType: 'jsonp',
+        data: $(this).serialize()
+    }).done(function(data) {
+       $('#messages').removeClass('hide').addClass('alert alert-success alert-dismissible').slideDown().show();
+       $('#messages_content').html('<strong>¡Tu mensaje ha sido enviado con exito!</strong>');
+   }).fail(function(data) {
+      $('#messages').removeClass('hide').addClass('alert alert-danger alert-dismissible').slideDown().show();
+      $('#messages_content').html('<strong>Hubo algún problema al enviar tu mensaje</strong>');
+  });
+    e.preventDefault();
+});
+</script>
