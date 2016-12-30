@@ -2,117 +2,108 @@
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <div id="messages_content"></div>
 </div>
-<div class="panel panel-default well">
-    <div class="panel-body">
-        <form class="form-horizontal" id="contacto-form" method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3">
-            <div class="form-group">
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Nombre y Apellido" name="nombre" tabindex="1" maxlength="40" required="required">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-fullscreen"></span>
-                        </div>
-                        <select class="form-control" name="tipo" tabindex="2" required="required">
-                            <option value="">¿Qué eres?</option>
-                            <option value="Estudiante">Estudiante</option>
-                            <option value="Profesor">Profesor</option>
-                            <option value="Escuela">Escuela</option>
-                            <option value="Universidad">Universidad</option>
-                            <option value="Empresa">Empresa</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-envelope"></span>
-                        </div>
-                        <input type="email" class="form-control" placeholder="Correo electrónico" name="correo"  tabindex="3" maxlength="35" required="required">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-education"></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Escuela/Universidad" name="escuela"  tabindex="4" maxlength="55">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-globe"></span>
-                        </div>
-                        <select class="form-control" name="estado" tabindex="5">
-                            <option value="">¿De dónde eres?</option>
-                            <option value="Extranjero">-No soy de Venezuela-</option>
-                            <option value="Amazonas">Amazonas</option>
-                            <option value="Anzoátegui">Anzoátegui</option>
-                            <option value="Apure">Apure</option>
-                            <option value="Aragua">Aragua</option>
-                            <option value="Barinas">Barinas</option>
-                            <option value="Bolívar">Bolívar</option>
-                            <option value="Carabobo">Carabobo</option>
-                            <option value="Cojedes">Cojedes</option>
-                            <option value="Delta Amacuro">Delta Amacuro</option>
-                            <option value="Dependencias Federales">Dependencias Federales</option>
-                            <option value="Distrito Capital">Distrito Capital</option>
-                            <option value="Falcón">Falcón</option>
-                            <option value="Guárico">Guárico</option>
-                            <option value="Lara">Lara</option>
-                            <option value="Mérida">Mérida</option>
-                            <option value="Miranda">Miranda</option>
-                            <option value="Monagas">Monagas</option>
-                            <option value="Nueva Esparta">Nueva Esparta</option>
-                            <option value="Portuguesa">Portuguesa</option>
-                            <option value="Sucre">Sucre</option>
-                            <option value="Tachira">Tachira</option>
-                            <option value="Trujillo">Trujillo</option>
-                            <option value="Vargas">Vargas</option>
-                            <option value="Yaracuy">Yaracuy</option>
-                            <option value="Zulia">Zulia</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-phone"></span>
-                        </div>
-                        <input type="tel" class="form-control" placeholder="Teléfono" name="telefono"  tabindex="6" size="11">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-comment glyphicon-2"></span>
-                        </div>
-                        <textarea class="form-control" name="message" rows="5" placeholder="Escribe tu mensaje aquí"  tabindex="7" required="required"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <button type="submit" id="send" class="btn btn-primary"  tabindex="8">Enviar</button>
-                </div>
-            </div>
-            <input type="hidden" value="">
-        </form>
+{%capture name%}
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-user"></span>
     </div>
+    <input type="text" class="form-control" placeholder="Nombre y Apellido" name="nombre" tabindex="1" maxlength="40" required="required">
+</div>{%endcapture%}{%capture email%}
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-envelope"></span>
+    </div>
+    <input type="email" class="form-control" placeholder="Correo electrónico" name="correo"  tabindex="3" maxlength="35" required="required">
+</div>{%endcapture%}{%capture telefono%}
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-phone"></span>
+    </div>
+    <input type="tel" class="form-control" placeholder="Teléfono" name="telefono"  tabindex="6" size="11">
+</div>{%endcapture%}{%capture escuela%}
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-education"></span>
+    </div>
+    <input type="text" class="form-control" placeholder="Escuela/Universidad" name="escuela"  tabindex="4" maxlength="55">
+</div>{%endcapture%}{%capture direccion%}
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-globe"></span>
+    </div>
+    <select class="form-control" name="estado" tabindex="5">
+        <option value="">¿De dónde eres?</option>
+        <option value="Extranjero">-No soy de Venezuela-</option>
+        <option value="Amazonas">Amazonas</option>
+        <option value="Anzoátegui">Anzoátegui</option>
+        <option value="Apure">Apure</option>
+        <option value="Aragua">Aragua</option>
+        <option value="Barinas">Barinas</option>
+        <option value="Bolívar">Bolívar</option>
+        <option value="Carabobo">Carabobo</option>
+        <option value="Cojedes">Cojedes</option>
+        <option value="Delta Amacuro">Delta Amacuro</option>
+        <option value="Dependencias Federales">Dependencias Federales</option>
+        <option value="Distrito Capital">Distrito Capital</option>
+        <option value="Falcón">Falcón</option>
+        <option value="Guárico">Guárico</option>
+        <option value="Lara">Lara</option>
+        <option value="Mérida">Mérida</option>
+        <option value="Miranda">Miranda</option>
+        <option value="Monagas">Monagas</option>
+        <option value="Nueva Esparta">Nueva Esparta</option>
+        <option value="Portuguesa">Portuguesa</option>
+        <option value="Sucre">Sucre</option>
+        <option value="Tachira">Tachira</option>
+        <option value="Trujillo">Trujillo</option>
+        <option value="Vargas">Vargas</option>
+        <option value="Yaracuy">Yaracuy</option>
+        <option value="Zulia">Zulia</option>
+    </select>
+</div>{%endcapture%}{%capture tipo%}
+    <div class="input-group">
+        <div class="input-group-addon">
+            <span class="glyphicon glyphicon-fullscreen"></span>
+        </div>
+        <select class="form-control" name="tipo" tabindex="2" required="required">
+            <option value="">¿Qué eres?</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Profesor">Profesor</option>
+            <option value="Escuela">Escuela</option>
+            <option value="Universidad">Universidad</option>
+            <option value="Empresa">Empresa</option>
+            <option value="Otro">Otro</option>
+        </select>
+    </div>{%endcapture%}
+<div class="panel panel-default well">
+<div class="panel-body">
+<form class="form-horizontal" id="contacto-form" method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3">
+<div class="form-group">
+    <div class="col-sm-6">{{name}}</div>
+    <div class="col-sm-6">{{tipo}}</div>
+</div>
+<div class="form-group">
+    <div class="col-sm-6">{{email}}</div>
+    <div class="col-sm-6">{{escuela}}</div>
+</div>
+<div class="form-group">
+    <div class="col-sm-12">
+        <div class="input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-comment glyphicon-2"></span>
+            </div>
+            <textarea class="form-control" name="message" rows="5" placeholder="Escribe tu mensaje aquí"  tabindex="7" required="required"></textarea>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-sm-12">
+        <button type="submit" id="send" class="btn btn-primary btn-block"  tabindex="8">Enviar</button>
+    </div>
+</div>
+<input type="hidden" value="">
+</form>
+</div>
 </div>
 <script>
 $('form#contacto-form').submit( function(e) {

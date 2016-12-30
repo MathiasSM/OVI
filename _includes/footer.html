@@ -4,13 +4,21 @@
 <div>
 <h3>Organizadores</h3>
 <div>
-    {%include utils/institucion-footer.html nombre='ACI' %}
+{%include utils/institucion-footer.html nombre='ACI'   link=site.url                    description='Asociación Venezolana de Competencias Informáticas'%}
+{%include utils/institucion-footer.html nombre='USB'   link='http://www.usb.ve/'        description='Universidad Simón Bolívar'%}
+{%include utils/institucion-footer.html nombre='UCV'   link='http://ucv.ve/'            description='Universidad Central de Venezuela'%}
+{%include utils/institucion-footer.html nombre='UCAB'  link='http://www.ucab.edu.ve/'   description='Universidad Católica Andrés Bello'%}
+{%include utils/institucion-footer.html nombre='UNEFA' link='http://www.unefa.edu.ve/'  description='Universidad Nacional Experimental Politécnica de la Fuerza Armada'%}
 </div>
 </div>
 <div>
 <h3>Patrocinadores</h3>
 <div>
-    <a href="/patrocinadores" class="pat-more" title="Más patrocinadores"><span class="glyphicon glyphicon-menu-right gi-2x"></span></a>
+{%include utils/institucion-footer.html nombre='intraffic' link=''  description='Intraffic'%}
+{%include utils/institucion-footer.html nombre='bnc' link=''  description='Banco NAcional de Crédito'%}
+{%include utils/institucion-footer.html nombre='akdemia' link=''  description='Akdemia'%}
+{%include utils/institucion-footer.html nombre='smartmatic' link=''  description='Smartmatic'%}
+<a href="/patrocinadores" class="pat-more" title="Más patrocinadores"><span class="glyphicon glyphicon-menu-right gi-2x"></span></a>
 </div>
 </div>
 </div>

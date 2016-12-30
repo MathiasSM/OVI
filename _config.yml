@@ -1,7 +1,7 @@
-title: "Olimpíada Venezolana de Informática"
+title: "Olimpíada Venezolana de Algoritmia"
 description: "Competencia anual de programación para estudiantes de bachillerato."
 author: mathiassm
-url: http://ovi.github.io
+url:
 permalink:
 encoding: "utf-8"
 timezone: "America/Caracas"
@@ -41,3 +41,4 @@ collections:
         output: true
         permalink: /:collection/:path/
     news:
+    libros:

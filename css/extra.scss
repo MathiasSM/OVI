@@ -119,9 +119,13 @@ footer.main-footer{
                 @include flex-wrap(wrap);
                 @include align-items(center);
                 & img {
-                    width:auto;height:100px; @include opacity(.7);
+                    outline: 1px solid transparent;
+                    height:auto;max-height:100px;max-width:120px;
+                    @include opacity(.3);
+                    @include transition(opacity 2s ease);
                     &:hover, &:active{
-                        @include opacity(.7);
+                        @include transition(opacity .3s ease);
+                        @include opacity(1);
                     }
                 }
                 & a {display:inline-block;}
