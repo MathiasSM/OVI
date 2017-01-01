@@ -1,13 +1,27 @@
 registro:
   fecha: 2017-06-10 23:59
-  mensaje: Hasta el 10 Jun 2018 - 23:59
+  mensaje: Hasta el
 
 competencia:
-  fecha: 2017-06-10 08:00
-  mensaje: Viernes 12 Oct 2018 - 08:00
+  fecha: 2017-06-31 08:00
+  mensaje: Viernes
 
 premiacion:
-  fecha: 2017-06-10 15:00
-  mensaje: Viernes 12 Oct 2018 - 15:00
+  fecha: 2017-12-10 15:00
+  mensaje: Viernes
 
 periodo-actual: 2016-2017
+
+mes:
+  - enero
+  - febrero
+  - marzo
+  - abril
+  - mayo
+  - junio
+  - julio
+  - agosto
+  - septiembre
+  - octubre
+  - noviembre
+  - diciembre

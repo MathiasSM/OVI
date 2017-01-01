@@ -13,7 +13,7 @@
     <div class="input-group-addon">
         <span class="glyphicon glyphicon-envelope"></span>
     </div>
-    <input type="email" class="form-control" placeholder="Correo electrónico" name="correo"  tabindex="3" maxlength="35" required="required">
+    <input type="email" class="form-control" placeholder="Correo electrónico" name="correo"  tabindex="2" maxlength="35" required="required">
 </div>{%endcapture%}{%capture telefono%}
 <div class="input-group">
     <div class="input-group-addon">
@@ -65,7 +65,7 @@
         <div class="input-group-addon">
             <span class="glyphicon glyphicon-fullscreen"></span>
         </div>
-        <select class="form-control" name="tipo" tabindex="2" required="required">
+        <select class="form-control" name="tipo" tabindex="3" required="required">
             <option value="">¿Qué eres?</option>
             <option value="Estudiante">Estudiante</option>
             <option value="Profesor">Profesor</option>
@@ -80,10 +80,10 @@
 <form class="form-horizontal" id="contacto-form" method="POST" action="https://getsimpleform.com/messages?form_api_token=79bf29870a0336fa2295ac7b3496f0e3">
 <div class="form-group">
     <div class="col-sm-6">{{name}}</div>
-    <div class="col-sm-6">{{tipo}}</div>
+    <div class="col-sm-6">{{email}}</div>
 </div>
 <div class="form-group">
-    <div class="col-sm-6">{{email}}</div>
+    <div class="col-sm-6">{{tipo}}</div>
     <div class="col-sm-6">{{escuela}}</div>
 </div>
 <div class="form-group">

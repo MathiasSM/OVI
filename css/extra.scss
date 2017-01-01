@@ -1,5 +1,7 @@
 @import 'var';@import 'social-colors';
 
+// RESETS
+// HTML resets
 *{font-family: $font-base;;}
 html,body{height:100%;}
 body{
@@ -17,24 +19,41 @@ body{
         margin:0 !important;
     }
 }
-
-// Some resets
-.gi-2x{font-size: 2em;}
-.gi-3x{font-size: 3em;}
-.gi-4x{font-size: 4em;}
-.gi-5x{font-size: 5em;}
 p {text-align:justify;}
-.navbar-right {margin-right:0;}
-nav.main-nav {width:100%;text-align:center;}
+h1, h2, h3 {margin-top:1.2em;margin-bottom:.7em;}
+h4, h5, h6 {margin-top:1em;margin-bottom:.5em;}
+// Bootstrap resets
+.panel {padding:0;}
+.row{margin:0;}
+.panel-heading h2{
+    font-size:14px;
+    line-height:1.42857143;
+    font-weight:700;
+    margin:0;
+    display:inline-block;
+}
 nav a.list-group-item{padding:0;& span{display:block; padding: 10px 15px;}}
 .navbar{margin-bottom:10px;}
 .menu-tabs{min-height:50px;margin:0;}
-.menu-toggle{width:100%;border:none;&:hover,&:active,&:focus,&visited{background:none;}}
-.panel {padding:0;}
-.row{margin:0;}
-.main-nav li.ctc {margin-top:7px; ;& a.ctc{padding: .5em;}}
+.menu-toggle{
+    width:100%;
+    border:none;
+    &:hover,&:active,&:focus,&visited{
+        background:none;
+    }
+}
+h1.navbar-brand{margin:0;& a{color:#777;}}
+// extra resets
 .push-down{margin-bottom:1em;}
-.panel-heading h2{font-size:14px;line-height:1.42857143;font-weight:700;margin:0;display:inline-block;}
+
+
+///////////////////////////////////////////////////////////
+nav.main-nav{
+    width:100%;
+    text-align:center;
+    & li.ctc {margin-top:7px; ;& a.ctc{padding: .5em;}}
+    .navbar-right {margin-right:0;}
+}
 
 a.social-link {
     svg{
@@ -158,10 +177,10 @@ footer.main-footer{
         min-height:0;   max-height:100%;
         min-width:0;    max-width:100%;
     }
-    &.instituciones-giga a {@include flex(0 1 100%);}
-    &.instituciones-mega a {@include flex(0 1 50%);}
-    &.instituciones-kilo a {@include flex(0 1 33.33333333%);}
-    &.instituciones-byte a {@include flex(0 1 25%);}
+    &.instituciones-giga a {@include flex(0 1 1/1*100%);}
+    &.instituciones-mega a {@include flex(0 1 1/2*100%);}
+    &.instituciones-kilo a {@include flex(0 1 1/3*100%);}
+    &.instituciones-byte a {@include flex(0 1 1/4*100%);}
 }
 .libro-flex{
     @include flexify;
@@ -175,7 +194,7 @@ footer.main-footer{
 section.tabpanel{padding-right:5%;padding-left:5%;}
 
 
-@media (min-width: 768px) { //Tablets
+@media (min-width: 768px) { //Tablets and beyond
 
     .main-nav li.ctc {margin-left:20px;}
     .menu-toggle{display:none;}

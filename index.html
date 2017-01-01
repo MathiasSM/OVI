@@ -9,9 +9,9 @@ layout: minimal
             <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Algoritmia</h1>
         </header>
         <section class="container-fluid fechas">
-            <div class="fecha fecha1"><h2>Registro</h2><time datetime="{{site.data.fechas.registro.fecha}}">{{site.data.fechas.registro.mensaje}}</time></div>
-            <div class="fecha fecha2"><h2>Competencia</h2><time datetime="{{site.data.fechas.competencia.fecha}}">{{site.data.fechas.competencia.mensaje}}</time></div>
-            <div class="fecha fecha3"><h2>Premiación</h2><time datetime="{{site.data.fechas.premiacion.fecha}}">{{site.data.fechas.premiacion.mensaje}}</time></div>
+            <div class="fecha fecha1"><h2>Registro</h2><time datetime="{{site.data.fechas.registro.fecha}}">{%include utils/fecha.html fecha=site.data.fechas.registro.fecha mensaje=site.data.fechas.registro.mensaje%}</time></div>
+            <div class="fecha fecha2"><h2>Competencia</h2><time datetime="{{site.data.fechas.competencia.fecha}}">{%include utils/fecha.html fecha=site.data.fechas.competencia.fecha mensaje=site.data.fechas.competencia.mensaje%}</time></div>
+            <div class="fecha fecha3"><h2>Premiación</h2><time datetime="{{site.data.fechas.premiacion.fecha}}">{%include utils/fecha.html fecha=site.data.fechas.premiacion.fecha mensaje=site.data.fechas.premiacion.mensaje%}</time></div>
         </section>
         <main class="container-fluid noticias">
             <div class="panel panel-primary">
@@ -20,8 +20,7 @@ layout: minimal
                     {%assign news = site.news | sort: 'title' | sort: 'date' %}{%for item in news%}{%assign pathi = item.path | split:'/'%}{%assign periodi = pathi[1] %}{%if periodi == site.data.fechas.periodo-actual and item.published != false%}
                     <article class="noticia">
                         <h2>{{item.title}}</h2>
-                        {{item.content}}
-                        <time datetime="{{item.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
+                        {{item.content}}<time datetime="{{item.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
                     </article>{%endif%}{%endfor%}
                 </div>
             </div>
