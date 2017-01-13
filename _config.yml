@@ -28,12 +28,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+host: 0.0.0.0
+
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
 
 sass:
-  sass_dir: _sass
+  sass_dir: css
   style: :compressed
 
 collections:
