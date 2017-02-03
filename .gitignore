@@ -1,5 +1,7 @@
 _site
 images/icons/square*
+.ruby-version
+Gemfile.lock
 
 # Compiled source #
 ###################

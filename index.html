@@ -5,8 +5,8 @@ layout: minimal
 <div class="tab-content">
     <section role="tabpanel" class="tab-pane active" id="home">
         <header class="container-fluid main-header">
-            <img class="sitio-logo center-block" src="/images/ova-logo.png" height="300" alt="OVA">
-            <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Algoritmia</h1>
+            <img class="sitio-logo center-block" src="/images/ovi-logo.png" height="300" alt="OVA">
+            <h1 class="sitio-titulo text-center">Olimpíada Venezolana de Informática</h1>
         </header>
         <section class="container-fluid fechas">
             <div class="fecha fecha1"><h2>Registro</h2><time datetime="{{site.data.fechas.registro.fecha}}">{%include utils/fecha.html fecha=site.data.fechas.registro.fecha mensaje=site.data.fechas.registro.mensaje%}</time></div>
@@ -22,9 +22,8 @@ layout: minimal
                         <h2>{{item.title}}</h2>
                         {{item.content}}<time datetime="{{item.date | date: "%Y-%m-%d"}}">{{item.date  | date: "%d-%m-%Y"}}</time>
                     </article>{%endif%}{%endfor%}
-                </div>
+				</div>
             </div>
-
         </main>
     </section>
 </div>
